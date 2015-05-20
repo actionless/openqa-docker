@@ -1,0 +1,6 @@
+webui:
+    image: fedoraqa/openqa_webui
+    volumes:
+        - ./data:/data
+    ports:
+        - "8080:443"
