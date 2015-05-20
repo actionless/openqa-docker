@@ -1,6 +1,13 @@
 webui:
-    image: fedoraqa/openqa_webui
+    build: ./webui
     volumes:
         - ./data:/data
     ports:
         - "8080:443"
+worker:
+    build: ./worker
+    volumes:
+        - ./data:/data
+    links:
+        - webui:openqa_webui
+    privileged: true
