@@ -7,7 +7,7 @@ RUN useradd -m geekotest && \
     zypper ar -f obs://devel:openQA/openSUSE_13.2 openQA && \
     zypper ar -f obs://devel:openQA:13.2/openSUSE_13.2 openQA-perl-modules && \
     curl https://build.opensuse.org/source/devel:openQA/_pubkey > /tmp/pubkey && rpm --import /tmp/pubkey && \
-    zypper --non-interactive in --from devel_openQA_stable openQA-worker qemu-kvm \
+    zypper --non-interactive in --from devel_openQA_stable openQA-worker qemu-kvm && \
 	zypper --non-interactive in libusb-1_0-0
 
 # set-up qemu
